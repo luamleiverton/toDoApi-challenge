@@ -109,9 +109,6 @@ app.patch('/todos/:id/done', checksExistsUserAccount, (request, response) => {
 
 app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
   const { user } = request;
-  //const todo = request;
-  //const todo = checksExistsTodoId(request)
-  //const {user} = request;
   const id = request.params.id;
   const todo = user.todos.find(todo => todo.id === id);
 
